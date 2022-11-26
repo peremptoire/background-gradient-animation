@@ -1,0 +1,32 @@
+
+:root {
+  --largeur: 1920px;
+  --hauteur: 1080px; /* Pour un cadre carré, mettez la même valeur en hauteur et en largeur */
+  --vitesseanimation: 8s;
+  --couleur1: #4CA1AF;
+  --couleur2: #C4E0E5; /* Pour un cadre de couleur uniforme et sans animation, mettre la même couleur que la variable couleur --couleur1 
+  Plus d'informations sur les couleurs et les dégradés sur https://cssgradient.io */
+}
+
+/* Ne modifiez rien en dessous sauf si vous savez ce que vous faites */
+
+
+.gradient-background {
+  background: linear-gradient(70deg, var(--couleur1), var(--couleur2));
+  background-size: 400% 400%;
+  animation: animationGradient var(--vitesseanimation) ease infinite;
+  width: var(--largeur);
+  height: var(--hauteur);
+}
+
+@keyframes animationGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
